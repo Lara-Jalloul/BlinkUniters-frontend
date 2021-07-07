@@ -1,7 +1,7 @@
 import React from "react";
 
 function Faq() {
-  return <div>Faq Page</div>;
+  return <div>FAQ Page</div>;
 }
 
 export default Faq;

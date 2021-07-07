@@ -9,7 +9,7 @@
   justify-content: space-around;
   align-items: center;
   height: 75px;
-  background-color: #060b26;
+  background-color: #242e66;
   color: white;
 }
 
@@ -83,7 +83,7 @@
     position: absolute;
     font-size: 30px;
     color: white;
-    background-color: #060b26;
+    background-color: #242e66;
     border: none;
     outline: none;
     top: 15px;
