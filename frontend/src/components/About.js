@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../App.css";
+import "./About.css";
 
 function About() {
   const [data, setData] = useState([
@@ -26,7 +26,7 @@ function About() {
             velit ducimus, enim inventore earum, eligendi nostrum pariatur
             necessitatibus eius dicta a voluptates sit deleniti autem error eos
             totam nisi neque voluptates sit deleniti autem error eos totam nisi
-            neque.
+            neque. batata
           </p>
           <div class="skills">
             <span>Lara</span>
