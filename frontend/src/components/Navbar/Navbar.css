@@ -16,6 +16,24 @@
 .logo {
   font-size: 30px;
 }
+.home:hover {
+  color: pink;
+}
+.bands:hover {
+  color: pink;
+}
+.news:hover {
+  color: pink;
+}
+.faq:hover {
+  color: pink;
+}
+.contact:hover {
+  color: pink;
+}
+.about:hover {
+  color: pink;
+}
 
 .nav-links {
   display: flex;
