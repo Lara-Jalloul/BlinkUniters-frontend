@@ -24,10 +24,11 @@ body {
 }
 .panel {
   margin-bottom: 20px !important;
-  background-color: #ffffff;
+  background-color: rgb(115, 132, 153);
   border: 1px solid transparent;
   -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
   box-shadow: 15px 16px 13px 8px rgb(4 4 4 / 5%);
+  justify-content: center;
 }
 .panel-body {
   margin-bottom: 20px;

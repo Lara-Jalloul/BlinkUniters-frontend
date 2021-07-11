@@ -20,7 +20,7 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="Home_page ">
       <HomeSlider />
       <HomeCards />
       <HomeTestimonial {...data} />
