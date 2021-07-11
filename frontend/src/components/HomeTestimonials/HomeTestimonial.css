@@ -1,12 +1,12 @@
 .testimonial_box {
   padding-top: 1rem;
   width: 50%;
+  height: 250px;
   margin: auto;
   border: 4px solid white;
   border-radius: 25px;
   background-color: rgb(255, 255, 102);
 }
-
 .Home_testimonial {
   padding: 0.5rem;
   text-align: center;
@@ -28,7 +28,7 @@ p {
   .testimonial_box {
     padding-top: 1rem;
     width: 95%;
-    height: 350px;
+    height: 250px;
     margin: auto;
     border: 2px solid white;
     border-radius: 25px;
