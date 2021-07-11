@@ -4,6 +4,7 @@ import "./Navbar.css";
 
 function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
+
   return (
     <nav className="navbar">
       <h3 className="logo">BlinkUniters</h3>
