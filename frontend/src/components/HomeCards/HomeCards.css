@@ -1,0 +1,33 @@
+.Home_Cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+.card_img {
+  width: 400px;
+  height: 500px;
+}
+
+h2 {
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .Home_Cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 2rem;
+  }
+  .card_img {
+    width: 150px;
+    height: 200px;
+  }
+
+  h2 {
+    font-size: small;
+  }
+}

@@ -4,6 +4,7 @@ import "./Navbar.css";
 
 function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
+
   return (
     <nav className="navbar">
       <h3 className="logo">BlinkUniters</h3>
@@ -11,7 +12,7 @@ function Navbar() {
         className={isMobile ? "nav-links-mobile" : "nav-links"}
         onClick={() => setIsMobile(false)}
       >
-        <Link to="/" className="home">
+        <Link to="/testimonials" className="home">
           <li>Home</li>
         </Link>
         <Link to="/bands" className="bands">
