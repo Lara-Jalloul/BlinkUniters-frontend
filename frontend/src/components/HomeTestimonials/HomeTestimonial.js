@@ -4,45 +4,40 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import "./HomeTestimonial.css";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
-export default function HomeTestimonial() {
+export default function HomeTestimonial(props) {
+  console.log(props);
   return (
-    <>
-      <div className="testimonial_box">
-        <AliceCarousel
-          responsive={"responsive"}
-          // autoPlay="true"
-          // autoPlayStrategy="none"
-          // infinite="true"
-          // autoPlayInterval="2000"
-          animationType="fadeout"
-          // autoHeight="true"
-          // paddingLeft="1"
-        >
-          <div className="Home_testimonial">
-            <h3>bassam</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias,
-              reiciendis.
-            </p>
-          </div>
-          <div className="Home_testimonial">
-            <h3>bassam</h3>
-            <FaQuoteLeft className="quotation-left" />
+    <div className="testimonial_box">
+      <AliceCarousel responsive={"responsive"} animationType="fadeout">
+        <div className="Home_testimonial">
+          <h3>BASSAM HAMDAR</h3>
+          <FaQuoteLeft className="quotation-left" />
 
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo,
-              hic autem aspernatur distinctio corrupti ipsa odio repellendus
-              tempora iusto libero, aut dolor molestiae quos quaerat asperiores
-              dolorum dolorem. Reprehenderit distinctio libero eaque mollitia
-              neque modi rerum, similique placeat ea earum, alias totam! Quos
-              laudantium, commodi voluptatibus recusandae consequatur quidem
-              nostrum.
-            </p>
-            <FaQuoteRight className="quotation-right" />
-          </div>
-        </AliceCarousel>
-      </div>
-      <br />
-    </>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+            perferendis doloremque culpa quas deserunt. Tempora maxime
+            voluptates nisi harum aperiam nostrum in enim necessitatibus
+            accusamus, dicta fugit ex. Maiores unde exercitationem nihil
+            blanditiis a delectus nemo deleniti odio magnam suscipit
+            dignissimos, assumenda qui at dolore, officia accusamus, perferendis
+            sequi. Delectus!
+          </p>
+          <FaQuoteRight className="quotation-right" />
+        </div>
+        <div className="Home_testimonial">
+          <h3>JOSEPH HARMANDRIAN</h3>
+          <FaQuoteLeft className="quotation-left" />
+
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Praesentium aliquid ex numquam doloribus fugit sint? Molestiae
+            nesciunt aliquid, ipsa ducimus sapiente quibusdam omnis temporibus
+            vitae non. Tenetur dolore sed, nostrum deserunt a architecto non
+            rerum quia sapiente porro neque iure!
+          </p>
+          <FaQuoteRight className="quotation-right" />
+        </div>
+      </AliceCarousel>
+    </div>
   );
 }
