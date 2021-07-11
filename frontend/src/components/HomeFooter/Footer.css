@@ -1,0 +1,15 @@
+.Home_Footer {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.React_Icon {
+  height: 10rem;
+  width: 5vmax;
+}
+.Footer_hrLine {
+  width: 80%;
+  margin: auto;
+}

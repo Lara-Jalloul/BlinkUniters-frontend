@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./About.css";
 import icon from "./images/icon.jpg";
 
+
 function About() {
   const [datas, setDatas] = useState([]);
 
