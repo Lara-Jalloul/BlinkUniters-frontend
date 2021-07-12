@@ -10,6 +10,7 @@
   width: 400px;
   height: 500px;
   border: 2px solid;
+  object-fit: cover;
 }
 .card_img:hover {
   border-color: yellow;
