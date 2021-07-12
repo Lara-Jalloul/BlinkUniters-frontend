@@ -8,9 +8,10 @@ function Home() {
   const [data, setData] = useState([{ writer_name: "", Comment: "" }]);
 
   useEffect(() => {
-    fetch("/testimonials")
+    fetch("/")
       .then((res) => {
         if (res.ok) {
+          console.log(res);
           return res.json();
         }
       })
@@ -23,7 +24,7 @@ function Home() {
     <div className="Home_page ">
       <HomeSlider />
       <HomeCards />
-      <HomeTestimonial {...data} />
+      <HomeTestimonial />
       <Footer />
     </div>
   );
