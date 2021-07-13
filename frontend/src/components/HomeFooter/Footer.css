@@ -6,6 +6,13 @@
   flex-direction: row;
   justify-content: space-around;
 }
+fieldset {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  border-radius: 25px;
+  border-bottom: none;
+}
 .React_Icon {
   height: 7rem;
   width: 3vmax;
@@ -14,6 +21,38 @@
   width: 80%;
   margin: auto;
   margin-top: 3rem;
+}
+.now_united_footer,
+.black_pink_footer {
+  width: 300px;
+  color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 320px) {
+  .Footer_hrLine {
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+  }
+  .React_Icon {
+    height: 5rem;
+    width: 5vmax;
+  }
+  fieldset {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    border-radius: 15px;
+  }
+  .now_united_footer,
+  .black_pink_footer {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 @media screen and (max-width: 480px) {
   .Footer_hrLine {
@@ -24,5 +63,18 @@
   .React_Icon {
     height: 5rem;
     width: 5vmax;
+  }
+  fieldset {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    border-radius: 15px;
+  }
+  .now_united_footer,
+  .black_pink_footer {
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 }
