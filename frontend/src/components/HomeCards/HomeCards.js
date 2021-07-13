@@ -11,13 +11,13 @@ export default function HomeCards() {
         <Link to="/bands">
           <img src={image1} className="card_img" alt="img" />
         </Link>
-        <h2>NOW UNITED</h2>
+        <h2 className="band_name">NOW UNITED</h2>
       </div>
       <div className="Black_Pink">
         <Link to="/bands">
           <img src={image2} className="card_img" alt="img" />
         </Link>
-        <h2>BLACK PINK</h2>
+        <h2 className="band_name">BLACK PINK</h2>
       </div>
     </div>
   );

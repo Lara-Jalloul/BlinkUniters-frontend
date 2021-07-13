@@ -27,7 +27,9 @@ function Contact() {
         <form id="contact-form" className="form-horizontal" role="form">
           <div className="form-group">
             <div className="col-sm-12">
-              <label htmlfor="name">Full name</label>
+              <label htmlfor="name" className="label_contact">
+                Full name
+              </label>
               <br></br>
               <input
                 type="text"
@@ -42,7 +44,9 @@ function Contact() {
           </div>
           <div className="form-group">
             <div className="col-sm-12">
-              <label htmlfor="email">Email address</label>
+              <label htmlfor="email" className="label_contact">
+                Email address
+              </label>
               <br></br>
               <input
                 type="email"
