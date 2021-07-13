@@ -7,11 +7,11 @@ import Faq from "./components/Faq";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar/Navbar";
-
+import Login from "./components/Login/Login";
 function App(props) {
-  useEffect(() => {
-    props.history.push("/testimonials");
-  }, []);
+  // useEffect(() => {
+  //   props.history.push("/testimonials");
+  // }, []);
   return (
     <div>
       <Navbar />
@@ -33,6 +33,9 @@ function App(props) {
         </Route>
         <Route path="/contactus" component={Contact} exact>
           <Contact />
+        </Route>
+        <Route path="/login" component={Login} exact>
+          <Login />
         </Route>
       </Switch>
     </div>
