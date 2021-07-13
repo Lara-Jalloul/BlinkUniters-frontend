@@ -6,13 +6,13 @@
   padding-top: 3rem;
 }
 .card_img {
-  animation-name: displaceContent;
-  animation-duration: 2.5s;
+  animation-name: displaceCard;
+  animation-duration: 3s;
   animation-delay: 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-@keyframes displaceContent {
+@keyframes displaceCard {
   from {
     transform: translateY(3em);
   }
@@ -36,7 +36,7 @@ h2 {
   color: whitesmoke;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
   .Home_Cards {
     display: flex;
     flex-direction: row;

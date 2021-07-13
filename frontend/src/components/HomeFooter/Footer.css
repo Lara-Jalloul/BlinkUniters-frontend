@@ -7,8 +7,8 @@
   justify-content: space-around;
 }
 .React_Icon {
-  height: 10rem;
-  width: 5vmax;
+  height: 7rem;
+  width: 3vmax;
 }
 .Footer_hrLine {
   width: 80%;
@@ -20,5 +20,9 @@
     width: 80%;
     margin: auto;
     margin-top: 5rem;
+  }
+  .React_Icon {
+    height: 5rem;
+    width: 5vmax;
   }
 }

@@ -24,10 +24,12 @@ body {
 }
 .panel {
   margin-top: 2rem;
+  margin: 1rem;
   /* margin-bottom: 20px !important; */
   background-color: #873ac5;
   border: 1px solid transparent;
   border-radius: 25px;
+  padding: 2rem;
   -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
   box-shadow: 15px 16px 13px 8px rgb(4 4 4 / 5%);
   justify-content: center;
@@ -49,6 +51,6 @@ body {
 }
 
 .panel-body {
-  /* margin-bottom: 20px; */
+  margin-bottom: 20px;
   margin-left: 30px;
 }
