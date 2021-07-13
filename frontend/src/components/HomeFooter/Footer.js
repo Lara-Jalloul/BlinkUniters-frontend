@@ -6,8 +6,10 @@ export default function Footer() {
     <>
       <hr className="Footer_hrLine" />
       <div className="Home_Footer">
-        <fieldset>
-          <legend>Black Pink</legend>
+        <fieldset className="footer_fieldset fieldset_ black_pink">
+          <legend className="footer_legend legend_black_pink">
+            Black Pink
+          </legend>
           <div className="now_united_footer">
             <a href="https://www.instagram.com/">
               <FaInstagram className="React_Icon" />
@@ -20,8 +22,10 @@ export default function Footer() {
             </a>
           </div>
         </fieldset>
-        <fieldset>
-          <legend>Now United</legend>
+        <fieldset className="footer_fieldset fieldset_now_united">
+          <legend className="footer_legend legend_now_united">
+            Now United
+          </legend>
 
           <div className="black_pink_footer">
             <a href="https://www.instagram.com/">

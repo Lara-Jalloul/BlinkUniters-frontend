@@ -30,29 +30,11 @@ fieldset {
   flex-direction: row;
   justify-content: space-evenly;
 }
-@media screen and (max-width: 320px) {
-  .Footer_hrLine {
-    width: 80%;
-    margin: auto;
-    margin-top: 5rem;
-  }
-  .React_Icon {
-    height: 5rem;
-    width: 5vmax;
-  }
-  fieldset {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-    border-radius: 15px;
-  }
-  .now_united_footer,
-  .black_pink_footer {
-    width: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
+.footer_legend {
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+  font-stretch: condensed;
 }
 @media screen and (max-width: 480px) {
   .Footer_hrLine {
@@ -72,7 +54,33 @@ fieldset {
   }
   .now_united_footer,
   .black_pink_footer {
-    width: 180px;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .Footer_hrLine {
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+  }
+  .React_Icon {
+    height: 5rem;
+    width: 5vmax;
+  }
+  fieldset {
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    border-radius: 15px;
+  }
+  .now_united_footer,
+  .black_pink_footer {
+    width: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

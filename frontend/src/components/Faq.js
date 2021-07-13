@@ -7,10 +7,13 @@ const Faq = () => {
     fetch("/faq")
       .then((res) => {
         if (res.ok) {
+          console.log("faq", res);
+
           return res.json();
         }
       })
       .then((jsonRes) => {
+        console.log(jsonRes);
         setData(jsonRes);
       });
   }, []);
