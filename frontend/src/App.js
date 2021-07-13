@@ -9,9 +9,9 @@ import Contact from "./components/Contact";
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/Login/Login";
 function App(props) {
-  // useEffect(() => {
-  //   props.history.push("/testimonials");
-  // }, []);
+  useEffect(() => {
+    props.history.push("/testimonials");
+  }, []);
   return (
     <div>
       <Navbar />
