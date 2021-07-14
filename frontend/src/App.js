@@ -9,14 +9,14 @@ import Contact from "./components/Contact";
 import Navbar from "./components/Navbar/Navbar";
 
 function App(props) {
-  useEffect(() => {
-    props.history.push("/testimonials");
-  }, []);
+  // useEffect(() => {
+  //   props.history.push("/testimonials");
+  // }, []);
   return (
     <div>
       <Navbar />
       <Switch>
-        <Route path="/testimonials" component={Home} exact>
+        <Route path="/" component={Home} exact>
           <Home />
         </Route>
         <Route path="/bands" component={Bands} exact>
