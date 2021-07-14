@@ -11,11 +11,11 @@ export default function HomeTestimonial() {
     fetch("/testimonials")
       .then((res) => {
         if (res.ok) {
+          console.log("res", res);
           return res.json();
         }
       })
       .then((jsonRes) => {
-        console.log("json", jsonRes);
         setData(jsonRes);
       });
   }, []);
@@ -24,14 +24,15 @@ export default function HomeTestimonial() {
     <>
       <div className="testimonial_box">
         <AliceCarousel responsive={"responsive"} animationType="fadeout">
-          {data.map((data, index) => (
-            <div className="Home_testimonial" key={index}>
-              <h3>{data.writer_name}</h3>
-              <FaQuoteLeft className="quotation-left" />
-              <p>{data.comment}</p>
-              <FaQuoteRight className="quotation-right" />
-            </div>
-          ))}
+          {data &&
+            data.map((data, index) => (
+              <div className="Home_testimonial" key={index}>
+                <h3>{data.writer_name}</h3>
+                <FaQuoteLeft className="quotation-left" />
+                <p>{data.comment}</p>
+                <FaQuoteRight className="quotation-right" />
+              </div>
+            ))}
         </AliceCarousel>
       </div>
       ;
