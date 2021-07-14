@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./Login.css";
 export default function Login() {
   const [input, setInput] = useState({
@@ -20,7 +21,7 @@ export default function Login() {
       email: input.email,
       password: input.password,
     };
-    console.log("creden", credentials);
+    axios.post("/login", credentials);
   };
   return (
     <div className="login">

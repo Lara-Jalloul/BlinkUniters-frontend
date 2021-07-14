@@ -16,7 +16,7 @@ function App(props) {
     <div>
       <Navbar />
       <Switch>
-        <Route path="/testimonials" component={Home} exact>
+        <Route path="/" component={Home} exact>
           <Home />
         </Route>
         <Route path="/bands" component={Bands} exact>
