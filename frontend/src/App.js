@@ -8,10 +8,11 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/Login/Login";
+import Admin from "./components/Admin";
 function App(props) {
   // useEffect(() => {
   //   props.history.push("/testimonials");
-  // }, []);
+  // }, []);q
   return (
     <div>
       <Navbar />
@@ -36,6 +37,9 @@ function App(props) {
         </Route>
         <Route path="/login" component={Login} exact>
           <Login />
+        </Route>
+        <Route path="/admin" component={Admin} exact>
+          <Admin />
         </Route>
       </Switch>
     </div>

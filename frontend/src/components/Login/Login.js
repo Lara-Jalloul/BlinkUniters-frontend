@@ -1,11 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "./Login.css";
+
 export default function Login() {
+  let history = useHistory();
   const [input, setInput] = useState({
     email: "",
     password: "",
   });
+  const [error, setError] = useState();
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      history.push("/admin");
+    }
+  }, [history]);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInput((data) => {
@@ -15,13 +24,33 @@ export default function Login() {
       };
     });
   };
-  const handleClick = (e) => {
+  const config = {
+    header: {
+      "Content-Type": "application/json",
+    },
+  };
+  const handleClick = async (e) => {
     e.preventDefault();
     const credentials = {
       email: input.email,
       password: input.password,
     };
-    axios.post("/login", credentials);
+    try {
+      await axios.post("/login", credentials, config).then((response) => {
+        console.log(response.data.token);
+        const { token } = response.data.token;
+        localStorage.setItem("token", token);
+      });
+      history.push("/admin");
+    } catch (error) {
+      console.log("error", error);
+      if (error) {
+        setError(error.response.data.error);
+        setTimeout(() => {
+          setError("");
+        }, 10000);
+      }
+    }
   };
   return (
     <div className="login">
@@ -53,10 +82,15 @@ export default function Login() {
             placeholder="Enter password"
             value={input.password}
           />
-          <button onClick={handleClick} className="login_button">
+          <button onClick={handleClick} type="submit" className="login_button">
             Login
           </button>
         </form>
+        {error && (
+          <span className="error" style={{ color: "red" }}>
+            {error}
+          </span>
+        )}
       </div>
     </div>
   );
