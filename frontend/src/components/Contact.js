@@ -5,6 +5,27 @@ function Contact() {
   const [data, setData] = useState([
     { location: "", phoneNumber: "", email: "" },
   ]);
+  const [status, setStatus] = useState("Send");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+    const { name, email, message } = e.target.elements;
+    let details = {
+      name: name.value,
+      email: email.value,
+      message: message.value,
+    };
+    let response = await fetch("http://localhost:5000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(details),
+    });
+    setStatus("Send");
+    let result = await response.json();
+    alert(result.status);
+  };
 
   useEffect(() => {
     fetch("/contactus")
@@ -24,12 +45,10 @@ function Contact() {
       </h1>
       <div className="contact-wrapper">
         {/* Left contact page */}
-        <form id="contact-form" className="form-horizontal" role="form">
+        <form onSubmit={handleSubmit} id="contact-form" className="form-horizontal" >
           <div className="form-group">
             <div className="col-sm-12">
-              <label htmlfor="name" className="label_contact">
-                Full name
-              </label>
+              <label htmlfor="name">Full name</label>
               <br></br>
               <input
                 type="text"
@@ -44,9 +63,7 @@ function Contact() {
           </div>
           <div className="form-group">
             <div className="col-sm-12">
-              <label htmlfor="email" className="label_contact">
-                Email address
-              </label>
+              <label htmlfor="email">Email address</label>
               <br></br>
               <input
                 type="email"
@@ -75,7 +92,7 @@ function Contact() {
           >
             <div className="alt-send-button">
               <i className="fa fa-paper-plane" />
-              <span className="send-text">SEND</span>
+              <span className="send-text">{status}</span>
             </div>
           </button>
         </form>
