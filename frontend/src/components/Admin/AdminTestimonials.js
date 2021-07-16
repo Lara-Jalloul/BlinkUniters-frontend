@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./AdminTestimonials.css";
 import axios from "axios";
+import TestimonialsTable from "./TestimonialsTable";
 export default function AdminTestimonials() {
   const [message, setMessage] = useState();
   const [input, setInput] = useState({
@@ -67,7 +68,7 @@ export default function AdminTestimonials() {
   };
   return (
     <div className="Admin-testimonials">
-      <h1>admin page</h1>
+      <h1>admin Testimonials </h1>
       <button onClick={handleLogout}>log out</button>
       <form className="testimonials-form">
         <input
@@ -89,6 +90,7 @@ export default function AdminTestimonials() {
       </form>
       {error && <span style={{ color: "red" }}>{error}</span>}
       {message && <span style={{ color: "red" }}>{message}</span>}
+      <TestimonialsTable />
     </div>
   );
 }
