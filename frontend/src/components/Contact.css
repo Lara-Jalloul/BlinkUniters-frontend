@@ -48,8 +48,7 @@
   font-weight: 400;
 }
 
-.form-control,
-textarea {
+.form-control {
   max-width: 400px;
   line-height: 30px;
   width: 300px;
