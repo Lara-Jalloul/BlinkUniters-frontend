@@ -17,6 +17,7 @@ export default function Login() {
   }, [history]);
   const handleChange = (e) => {
     const { name, value } = e.target;
+
     setInput((data) => {
       return {
         ...data,
@@ -37,7 +38,7 @@ export default function Login() {
     };
     try {
       await axios.post("/login", credentials, config).then((response) => {
-        console.log(response.data.token);
+        // console.log(response.data.token);
         const { token } = response.data.token;
         localStorage.setItem("token", token);
       });
