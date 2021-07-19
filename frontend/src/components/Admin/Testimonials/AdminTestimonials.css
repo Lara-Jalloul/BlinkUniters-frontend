@@ -3,7 +3,12 @@
   flex-direction: column;
   justify-content: center;
 } */
-
+.errorAndMessage {
+  padding-top: 1rem;
+  width: 33.33%;
+  text-align: center;
+  margin: auto;
+}
 .testimonials-form {
   display: flex;
   flex-direction: column;

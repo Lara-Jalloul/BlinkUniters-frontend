@@ -37,6 +37,7 @@ export default function AdminTestimonials() {
         .post("/admin/addTestimonials", testimonials, config)
         .then((res) => {
           console.log("res", res);
+
           if (res) {
             setMessage("testimonial has been added");
             setTimeout(() => {
@@ -47,7 +48,7 @@ export default function AdminTestimonials() {
     } catch (error) {
       console.log("error: ", error);
       if (error.response) {
-        setError(error.response.data);
+        setError(error.response.data.error);
         setTimeout(() => {
           setError("");
         }, 10000);
@@ -88,8 +89,10 @@ export default function AdminTestimonials() {
           Add
         </button>
       </form>
-      {error && <span style={{ color: "red" }}>{error}</span>}
-      {message && <span style={{ color: "red" }}>{message}</span>}
+      <div className="errorAndMessage">
+        {error && <span style={{ color: "red" }}>{error}</span>}
+        {message && <span style={{ color: "red" }}>{message}</span>}
+      </div>
       <TestimonialsTable />
     </div>
   );
