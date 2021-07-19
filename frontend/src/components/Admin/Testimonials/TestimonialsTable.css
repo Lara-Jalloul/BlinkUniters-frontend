@@ -4,16 +4,20 @@
   margin-top: 1rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 .table-area {
-  border-bottom: solid 1px red;
+  width: 431px;
+  border: solid 5px grey;
+  border-radius: 20px;
   table-layout: fixed;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 .table-head {
-  border-bottom: solid 1px red;
-  padding-right: 1rem;
+  border-bottom: solid 5px red;
   width: 126px;
+  margin-bottom: 0.5rem;
 }
 .table-raw {
   display: flex;
