@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./Contact.css";
+// let name = document.getElementById('name');
+// let email = document.getElementById('email');
+// let message = document.getElementById('message');
 
-function Contact() {
-  const [data, setData] = useState([
-    { location: "", phoneNumber: "", email: "" },
-  ]);
+const Contact = () => {
+  // const [data, setData] = useState([
+  //   // { location: "", phoneNumber: "", email: "" },
+  // ]);
   const [status, setStatus] = useState("Send");
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,27 +18,28 @@ function Contact() {
       email: email.value,
       message: message.value,
     };
-    let response = await fetch("http://localhost:5000/contact", {
+    let response = await fetch("http://localhost:5000/contact/sendMail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
       body: JSON.stringify(details),
     });
+    console.log(response)
     setStatus("Send");
     let result = await response.json();
     alert(result.status);
   };
 
-  useEffect(() => {
-    fetch("/contactus")
-      .then((res) => {
-        if (res.ok) {
-          return res.json();
-        }
-      })
-      .then((jsonRes) => setData(jsonRes));
-  }, []);
+  // useEffect(() => {
+  //   fetch("/contactus")
+  //     .then((res) => {
+  //       if (res.ok) {
+  //         return res.json();
+  //       }
+  //     })
+  //     .then((jsonRes) => setData(jsonRes));
+  // }, []);
 
   return (
     <section id="contact">
@@ -45,10 +49,14 @@ function Contact() {
       </h1>
       <div className="contact-wrapper">
         {/* Left contact page */}
-        <form onSubmit={handleSubmit} id="contact-form" className="form-horizontal" >
+        <form
+          onSubmit={handleSubmit}
+          id="contact-form"
+          className="form-horizontal"
+        >
           <div className="form-group">
             <div className="col-sm-12">
-              <label htmlfor="name">Full name</label>
+              <label htmlFor="name">Full name</label>
               <br></br>
               <input
                 type="text"
@@ -63,7 +71,7 @@ function Contact() {
           </div>
           <div className="form-group">
             <div className="col-sm-12">
-              <label htmlfor="email">Email address</label>
+              <label htmlFor="email">Email address</label>
               <br></br>
               <input
                 type="email"
