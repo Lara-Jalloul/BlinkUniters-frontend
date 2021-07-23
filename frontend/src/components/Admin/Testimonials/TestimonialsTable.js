@@ -3,7 +3,9 @@ import axios from "axios";
 import "./TestimonialsTable.css";
 import AdminUpdateTestimonials from "./AdminUpdateTestimonials";
 
-export default function TestimonialsTable() {
+export default function TestimonialsTable(props) {
+  const newInsert = props.data;
+
   const [isPopUp, setPopUp] = useState(false);
   const [id, setId] = useState("");
   const [data, setData] = useState([
@@ -15,6 +17,8 @@ export default function TestimonialsTable() {
   ]);
   const handleDelete = async (_id) => {
     await axios.delete("/admin/deleteTestimonials/" + _id);
+    const change = 0;
+    change = +1;
   };
   const popUp = (id) => {
     setPopUp(true);
@@ -30,7 +34,7 @@ export default function TestimonialsTable() {
 
       .then((resJson) => setData(resJson))
       .catch((err) => console.log(err));
-  }, []);
+  }, [newInsert]);
   return (
     <>
       <div className="table">

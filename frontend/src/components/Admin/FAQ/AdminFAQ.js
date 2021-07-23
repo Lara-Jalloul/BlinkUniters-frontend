@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useHistory } from "react";
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+
 import axios from "axios";
 import "./AdminFAQ.css";
 export default function AdminFAQ() {
@@ -51,21 +53,21 @@ export default function AdminFAQ() {
     }
   };
 
-  //   let history = useHistory();
-  //   useEffect(() => {
-  //     if (!localStorage.getItem("token")) {
-  //       history.push("/login");
-  //     }
-  //   }, [history]);
+  let history = useHistory();
+  useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      history.push("/login");
+    }
+  }, [history]);
 
-  //   const handleLogout = () => {
-  //     localStorage.removeItem("token");
-  //     history.push("/login");
-  //   };
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    history.push("/login");
+  };
   return (
     <div className="Admin-FAQ">
       <h1>admin FAQ </h1>
-      {/* <button onClick={handleLogout}>log out</button>  */}
+      <button onClick={handleLogout}>log out</button>
 
       <form className="FAQ-form">
         <textarea

@@ -42,7 +42,7 @@ export default function Login() {
         const { token } = response.data.token;
         localStorage.setItem("token", token);
       });
-      history.push("/admin");
+      history.push("/admin/testimonials");
     } catch (error) {
       console.log("error", error);
       if (error) {
