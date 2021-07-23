@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import AdminUpdateFAQ from "./AdminUpdateFAQ";
 
 export default function AdminDelFAQ() {
+  const [isPopUp, setPopUp] = useState(false);
+  const [id, setId] = useState("");
+
   const [data, setData] = useState([
     {
       question: "",
@@ -9,6 +13,11 @@ export default function AdminDelFAQ() {
       _id: "",
     },
   ]);
+  const popUp = (id) => {
+    setPopUp(true);
+    setId(id);
+  };
+
   const handleDelete = async (_id) => {
     await axios.delete("/admin/deleteFAQ/" + _id);
   };
@@ -51,7 +60,7 @@ export default function AdminDelFAQ() {
                     className="td upd"
                     onClick={() => {
                       console.log("clicked");
-                      //   popUp(data._id);
+                      popUp(data._id);
                     }}
                   >
                     Upd
@@ -62,6 +71,7 @@ export default function AdminDelFAQ() {
           ))}
         </table>
       </div>
+      <AdminUpdateFAQ trigger={isPopUp} setTrigger={setPopUp} id={id} />
     </div>
   );
 }
