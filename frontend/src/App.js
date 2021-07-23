@@ -37,12 +37,12 @@ function App(props) {
         <Route path="/login" component={Login} exact>
           <Login />
         </Route>
-        <Route path="/admin/testimonials" component={AdminTestimonials} exact>
+        {/* <Route path="/admin/testimonials" component={AdminTestimonials} exact>
           <AdminTestimonials />
         </Route>
         <Route path="/admin/faq" component={AdminFAQ} exact>
-          <AdminFAQ />
-        </Route>
+          <AdminFAQ /> */}
+        {/* </Route> */}
       </Switch>
     </div>
   );
