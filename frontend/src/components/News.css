@@ -1,0 +1,138 @@
+.News_page {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #34204a;
+  padding-bottom: 100px;
+  padding-top: 1rem;
+}
+
+.heading-1 {
+  margin: 0;
+  padding-bottom: 6rem;
+  color: rgb(231, 210, 210);
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+  font-family: "Teko", cursive;
+  font-size: 3rem;
+  padding-top: 5%;
+  text-transform: uppercase;
+  animation: glow 2s ease-in-out infinite alternate;
+  text-align: center;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 50px #ffe031;
+  }
+  to {
+    text-shadow: 0 0 30px #c13492, 0 0 10px #fa9119;
+  }
+}
+
+.heading-2 {
+  color: white;
+  font-size: 40px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  padding-bottom: 3%;
+}
+
+.heading-3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: crimson;
+  margin-bottom: 10px;
+}
+
+.sub-heading {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.sub-heading p {
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-right: 10px;
+}
+
+.sub-heading span {
+  color: #555;
+  font-weight: 300;
+  border-right: 1px solid #ccc;
+  padding-right: 10px;
+}
+
+.sub-heading .importent {
+  color: crimson;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.list {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.list p {
+  color: white;
+}
+
+.list img {
+  width: 80%;
+  height: 100px;
+  padding-bottom: 2%;
+  border: solid 4px rgb(255, 255, 255);
+}
+.list img:hover {
+  border-color: rgb(248, 224, 87);
+}
+
+.Slide {
+  width: 90%;
+  margin: auto;
+
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.slider_photo {
+  width: 100%;
+  height: 500px;
+  object-fit: fill;
+}
+
+@media (max-width: 950px) {
+  .home {
+    grid-template-columns: 1fr;
+  }
+
+  .lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    color: white;
+  }
+
+  .list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 480px) {
+  .slider_photo {
+    width: 100%;
+    height: 200px;
+    object-fit: fill;
+  }
+}
+
+@media (max-width: 650px) {
+  .lists {
+    grid-template-columns: 1fr;
+  }
+}
