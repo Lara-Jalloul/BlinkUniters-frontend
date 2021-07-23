@@ -1,29 +1,19 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./TestimonialsTable.css";
-import AdminUpdateTestimonials from "./AdminUpdateTestimonials";
 
-export default function TestimonialsTable(props) {
-  const newInsert = props.data;
-
-  const [isPopUp, setPopUp] = useState(false);
-  const [id, setId] = useState("");
+export default function AdminDelFAQ() {
   const [data, setData] = useState([
     {
-      writer_name: "",
-      Comment: "",
+      question: "",
+      answer: "",
       _id: "",
     },
   ]);
   const handleDelete = async (_id) => {
-    await axios.delete("/admin/deleteTestimonials/" + _id);
-  };
-  const popUp = (id) => {
-    setPopUp(true);
-    setId(id);
+    await axios.delete("/admin/deleteFAQ/" + _id);
   };
   useEffect(() => {
-    fetch("/admin/readTestimonials")
+    fetch("/admin/readFAQ")
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -32,9 +22,10 @@ export default function TestimonialsTable(props) {
 
       .then((resJson) => setData(resJson))
       .catch((err) => console.log(err));
-  }, [newInsert]);
+  }, []);
+
   return (
-    <>
+    <div>
       <div className="table">
         <table className="table-area">
           <thead>
@@ -47,8 +38,8 @@ export default function TestimonialsTable(props) {
           {data.map((data, index) => (
             <tbody key={data._id}>
               <tr className="table-raw">
-                <td className="td">{data.writer_name}</td>
-                <td className="td">{data.comment}</td>
+                <td className="td">{data.question}</td>
+                <td className="td">{data.answer}</td>
                 <td className="td">
                   <button
                     className="td del"
@@ -60,7 +51,7 @@ export default function TestimonialsTable(props) {
                     className="td upd"
                     onClick={() => {
                       console.log("clicked");
-                      popUp(data._id);
+                      //   popUp(data._id);
                     }}
                   >
                     Upd
@@ -71,11 +62,6 @@ export default function TestimonialsTable(props) {
           ))}
         </table>
       </div>
-      <AdminUpdateTestimonials
-        trigger={isPopUp}
-        setTrigger={setPopUp}
-        id={id}
-      />
-    </>
+    </div>
   );
 }
