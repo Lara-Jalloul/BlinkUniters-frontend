@@ -96,6 +96,7 @@ function Contact() {
             </div>
           </button>
         </form>
+        
 
         {/* Left contact page */}
         <div className="direct-contact-container">
