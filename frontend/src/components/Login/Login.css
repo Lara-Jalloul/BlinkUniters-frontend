@@ -3,7 +3,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-top: 1rem;
+  padding-top: 1rem;
+  margin-bottom: 0;
 }
 .input {
   display: flex;
@@ -47,7 +48,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-top: 1rem;
+    padding-top: 1rem;
   }
   .greeting > h2,
   h3 {
@@ -67,7 +68,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-top: 1rem;
+    padding-top: 1rem;
   }
   .greeting > h2,
   h3 {

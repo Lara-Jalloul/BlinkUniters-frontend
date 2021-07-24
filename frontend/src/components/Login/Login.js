@@ -87,11 +87,13 @@ export default function Login() {
             Login
           </button>
         </form>
-        {error && (
-          <span className="error" style={{ color: "red" }}>
-            {error}
-          </span>
-        )}
+        <div className="login-error">
+          {error && (
+            <span className="error" style={{ color: "red" }}>
+              {error}
+            </span>
+          )}
+        </div>
       </div>
     </div>
   );

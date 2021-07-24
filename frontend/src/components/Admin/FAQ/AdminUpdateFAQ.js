@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import "./AdminUpdateFAQ.css";
 export default function AdminUpdateFAQ(props) {
   let id = props.id;
   const [message, setMessage] = useState();
@@ -8,8 +8,8 @@ export default function AdminUpdateFAQ(props) {
 
   const [update, setUpdate] = useState([
     {
-      writer_name: "",
-      Comment: "",
+      question: "",
+      answer: "",
       _id: "",
     },
   ]);

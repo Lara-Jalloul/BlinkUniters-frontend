@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import AdminUpdateFAQ from "./AdminUpdateFAQ";
+import "./AdminDelFAQ.css";
 
 export default function AdminDelFAQ() {
   const [isPopUp, setPopUp] = useState(false);
@@ -34,7 +35,7 @@ export default function AdminDelFAQ() {
   }, []);
 
   return (
-    <div>
+    <div className="delete-section">
       <div className="table">
         <table className="table-area">
           <thead>

@@ -66,10 +66,12 @@ export default function AdminFAQ() {
     history.push("/login");
   };
   return (
-    <>
+    <div className="Admin-FAQ-section">
       <div className="Admin-FAQ">
-        <h1>admin FAQ </h1>
-        <button onClick={handleLogout}>log out</button>
+        <h1>Admin FAQ </h1>
+        <button onClick={handleLogout} className="logout">
+          log out
+        </button>
 
         <form className="FAQ-form">
           <textarea
@@ -78,12 +80,14 @@ export default function AdminFAQ() {
             name="question"
             className="FAQ-question"
             value={input.question}
+            placeholder="Enter question"
           ></textarea>
           <textarea
             onChange={handleChange}
             name="answer"
             className="FAQ-answer"
             value={input.answer}
+            placeholder="Enter answer"
           ></textarea>
           <button type="submit" onClick={handleClick}>
             Add
@@ -95,6 +99,6 @@ export default function AdminFAQ() {
         </div>
       </div>
       <AdminDelFAQ />
-    </>
+    </div>
   );
 }

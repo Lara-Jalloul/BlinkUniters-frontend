@@ -70,8 +70,10 @@ export default function AdminTestimonials() {
   };
   return (
     <div className="Admin-testimonials">
-      <h1>admin Testimonials </h1>
-      <button onClick={handleLogout}>log out</button>
+      <h1>Admin Testimonials </h1>
+      <button onClick={handleLogout} className="logout">
+        log out
+      </button>
       <form className="testimonials-form">
         <input
           onChange={handleChange}
@@ -79,12 +81,14 @@ export default function AdminTestimonials() {
           name="writer_name"
           className="testimonial-writer"
           value={input.writer_name}
+          placeholder="Enter writer's name"
         />
         <textarea
           onChange={handleChange}
           name="comment"
           className="testimonials-textarea"
           value={input.comment}
+          placeholder="Enter writer's comment"
         ></textarea>
         <button type="submit" onClick={handleClick}>
           Add
