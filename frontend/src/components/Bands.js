@@ -115,7 +115,7 @@ export default function Bands() {
 
       <div className="slides">
         <div className="slides__container">
-          <div className="slide">
+          <div className="slide" id="nowUnited">
             <h2>Brief Overview</h2>
 
             <p>
@@ -232,7 +232,7 @@ export default function Bands() {
 
       <div className="slides">
         <div className="slides__container">
-          <div className="slide">
+          <div className="slide" id="blackPink">
             <h2>Brief Overview</h2>
 
             <p>
