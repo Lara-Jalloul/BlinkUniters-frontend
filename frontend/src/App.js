@@ -8,8 +8,8 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/Login/Login";
-import AdminTestimonials from "./components/Admin/Testimonials/AdminTestimonials";
-import AdminFAQ from "./components/Admin/FAQ/AdminFAQ";
+import AdminTestimonials from './components/Admin/Testimonials/AdminTestimonials';
+import AdminFAQ from './components/Admin/FAQ/AdminFAQ';
 function App(props) {
   // useEffect(() => {
   //   props.history.push("/testimonials");
