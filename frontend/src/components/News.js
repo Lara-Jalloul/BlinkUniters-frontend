@@ -7,7 +7,7 @@ function News() {
   return (
     <>
       <div className="News_page">
-        <div className="container">
+        <div className="container-news">
           <h1 className="heading-1">Now United</h1>
           <div className="Slide">
             <AliceCarousel
@@ -101,7 +101,7 @@ function News() {
           </div>
         </div>
 
-        <div className="container">
+        <div className="container-black">
           <h1 className="heading-1">Black Pink</h1>
           <div className="Slide">
             <AliceCarousel

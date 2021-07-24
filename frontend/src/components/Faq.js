@@ -22,7 +22,7 @@ const Faq = () => {
     <>
       {data.map((data, index) => (
         <div key={index}>
-          <div className="container">
+          <div className="container-faq">
             <div className="row">
               <div className="col-md-12">
                 <div

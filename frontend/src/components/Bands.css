@@ -127,66 +127,6 @@
   background: linear-gradient(90deg, salmon, lightblue);
   margin-left: 0;
 }
-.slide:nth-child(2) {
-  background: linear-gradient(90deg, lightblue, lightgreen);
-  margin-left: 0;
-}
-.slide:nth-child(3) {
-  background: linear-gradient(90deg, yellow, pink);
-}
-.slide:nth-child(4) {
-  background: linear-gradient(90deg, rgb(217, 141, 219), pink);
-}
-.slide:nth-child(5) {
-  background: linear-gradient(90deg, pink, tomato);
-}
-.slide:nth-child(6) {
-  background: linear-gradient(90deg, tomato, rgb(124, 59, 133));
-}
-.slide:nth-child(7) {
-  background: linear-gradient(90deg, tomato, orchid);
-}
-/*
-*/
-
-.slide:nth-child(8) {
-  /* background-image: radial-gradient(circle, lightblue, pink, rgb(0, 255, 255)); */
-  background: linear-gradient(90deg, lightblue, lightgreen);
-}
-.slide:nth-child(9) {
-  background: linear-gradient(90deg, rgb(133, 144, 148), lightgreen);
-}
-.slide:nth-child(10) {
-  background-image: radial-gradient(circle, lightblue, pink, rgb(0, 255, 255));
-}
-.slide:nth-child(11) {
-  background: linear-gradient(90deg, rgb(243, 120, 48), rgb(243, 186, 153));
-}
-.slide:nth-child(12) {
-  background: linear-gradient(90deg, rgb(204, 156, 204), tomato);
-}
-.slide:nth-child(13) {
-  background: linear-gradient(90deg, cyan, orchid);
-}
-.slide:nth-child(14) {
-  /* background: linear-gradient(90deg, cyan, orchid) */
-  background: linear-gradient(90deg, tomato, rgb(146, 97, 165));
-}
-.slide:nth-child(15) {
-  background: linear-gradient(90deg, yellow, pink);
-}
-.slide:nth-child(16) {
-  background: linear-gradient(90deg, rgb(129, 95, 173), orchid);
-}
-.slide:nth-child(17) {
-  background: linear-gradient(90deg, rgb(127, 221, 159), rgb(75, 136, 25));
-}
-.slide:nth-child(18) {
-  background: linear-gradient(90deg, rgb(127, 221, 159), orchid);
-}
-.slide:nth-child(19) {
-  background: linear-gradient(90deg, rgb(127, 221, 159), rgb(68, 94, 66));
-}
 
 .slide {
   flex: 1 0;
