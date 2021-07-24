@@ -8,6 +8,8 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/Login/Login";
+import AdminTestimonials from './components/Admin/Testimonials/AdminTestimonials';
+import AdminFAQ from './components/Admin/FAQ/AdminFAQ';
 function App(props) {
   // useEffect(() => {
   //   props.history.push("/testimonials");
@@ -37,12 +39,12 @@ function App(props) {
         <Route path="/login" component={Login} exact>
           <Login />
         </Route>
-        {/* <Route path="/admin/testimonials" component={AdminTestimonials} exact>
+        <Route path="/admin/testimonials" component={AdminTestimonials} exact>
           <AdminTestimonials />
         </Route>
         <Route path="/admin/faq" component={AdminFAQ} exact>
-          <AdminFAQ /> */}
-        {/* </Route> */}
+          <AdminFAQ />
+        </Route>
       </Switch>
     </div>
   );

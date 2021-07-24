@@ -7,7 +7,7 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <h3 className="logo">BlinkUniters</h3>
+      <a className="logo" href="/">BlinkUniters</a>
       <ul
         className={isMobile ? "nav-links-mobile" : "nav-links"}
         onClick={() => setIsMobile(false)}
