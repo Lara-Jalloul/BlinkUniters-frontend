@@ -12,7 +12,7 @@ export default function Login() {
   const [error, setError] = useState();
   useEffect(() => {
     if (localStorage.getItem("token")) {
-      history.push("/admin");
+      history.push("/admin/testimonials");
     }
   }, [history]);
   const handleChange = (e) => {
