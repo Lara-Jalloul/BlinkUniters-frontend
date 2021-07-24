@@ -16,7 +16,7 @@ function News() {
               infinite="true"
               autoPlayInterval="3000"
               autoHeight="true"
-            >
+              >
               <img
                 src="https://festivalteen.com.br/wp-content/uploads/2019/09/now-united-turne-brasil-e1569264544589.jpg"
                 className="slider_photo"
