@@ -1,0 +1,38 @@
+.popUp {
+  border-radius: 20px;
+  position: relative;
+  margin: auto;
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  justify-items: center;
+  background-color: khaki;
+  padding-bottom: 5rem;
+  margin-bottom: 3rem;
+}
+.update-form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 90%;
+  height: 50%;
+  margin: auto;
+}
+.update-form > input {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.update-form > textarea {
+  margin-bottom: 1rem;
+  height: 25vh;
+  border-radius: 20px;
+}
+.update-form > button {
+  margin-bottom: 0.5rem;
+}
+.done {
+  width: 50px;
+  margin: auto;
+}
