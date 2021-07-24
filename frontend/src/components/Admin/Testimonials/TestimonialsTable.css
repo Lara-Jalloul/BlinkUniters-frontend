@@ -30,7 +30,8 @@
   flex-direction: row;
   justify-content: flex-start;
   width: 125px;
-  padding: 2px;
+  height: 55px;
+  margin-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
   overflow: hidden;

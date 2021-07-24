@@ -1,8 +1,6 @@
-/* .Admin-testimonials {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-} */
+.Admin-testimonials {
+  background-color: rgb(49, 2, 74);
+}
 .errorAndMessage {
   padding-top: 1rem;
   width: 33.33%;

@@ -94,7 +94,7 @@ export default function AdminTestimonials() {
         {error && <span style={{ color: "red" }}>{error}</span>}
         {message && <span style={{ color: "red" }}>{message}</span>}
       </div>
-      <TestimonialsTable />
+      <TestimonialsTable data={input.writer_name} />
     </div>
   );
 }
